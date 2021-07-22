@@ -95,7 +95,7 @@ export default function Clients() {
                     <S.Span>E-mail</S.Span>
                 </S.UlHeader>
                 <S.Ul>                
-                    {clients.map((client: Type.Client, index: number) => (
+                    {clients.length > 0 ? clients.map((client: Type.Client, index: number) => (
                         <S.Li 
                             key={index} 
                             data-id={client.id} 
@@ -105,7 +105,7 @@ export default function Clients() {
                             <S.Span>{client.email}</S.Span>
                             <S.ButtonSelect>Selecionar</S.ButtonSelect>
                         </S.Li>
-                    ))}
+                    )) : <S.NoData>Nenhum cliente foi encontrado.</S.NoData>}
                 </S.Ul>
             </S.List>
             <S.Aside>

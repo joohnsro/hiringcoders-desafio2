@@ -71,6 +71,7 @@ export const A = styled.a`
     font-weight: bold;
     text-decoration: none;
     padding: 12px 24px;
+    cursor: pointer;
 `;
 
 export const UlSocial = styled.ul`

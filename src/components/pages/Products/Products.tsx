@@ -101,7 +101,7 @@ export default function Products() {
                     <S.Span>Categoria</S.Span>
                 </S.UlHeader>
                 <S.Ul>                
-                    {products.map((product: Type.Product, index: number) => (
+                    {products.length > 0 ? products.map((product: Type.Product, index: number) => (
                         <S.Li 
                             key={index} 
                             data-id={product.id} 
@@ -111,7 +111,7 @@ export default function Products() {
                             <S.Span>{getCategoryName(product.category)}</S.Span>
                             <S.ButtonSelect>Selecionar</S.ButtonSelect>
                         </S.Li>
-                    ))}
+                    )) : <S.NoData>Nenhum produto foi encontrado.</S.NoData>}
                 </S.Ul>
             </S.List>
             <S.Aside>

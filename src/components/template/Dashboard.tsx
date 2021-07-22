@@ -27,10 +27,10 @@ export default function Dashboard() {
     function getNavButton(id: string, name: string, checked: boolean, index: number) {
 
         if ( !checked ) {
-            return (<S.Li key={index}><S.A href="!#" onClick={() => setCurrentPage(id)}>{name}</S.A></S.Li>)
+            return (<S.Li key={index}><S.A onClick={() => setCurrentPage(id)}>{name}</S.A></S.Li>)
         }
 
-        return (<S.LiActive key={index}><S.A href="!#" onClick={() => setCurrentPage(id)}>{name}</S.A></S.LiActive>);
+        return (<S.LiActive key={index}><S.A onClick={() => setCurrentPage(id)}>{name}</S.A></S.LiActive>);
         
     }
 

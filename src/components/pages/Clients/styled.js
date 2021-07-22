@@ -69,3 +69,11 @@ export const Aside = styled.aside`
     padding: 30px;
     overflow-y: auto;
 `;
+
+export const NoData = styled.li`
+    list-style: none;
+    padding: 12px;
+    border: 1px solid #efefef;
+    cursor: pointer;
+    align-items: center;
+`;
